@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-In this project involves operationalizing a Machine Learning Microservice API. 
+This project involves operationalizing a Machine Learning Microservice API. 
 
-Given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. One can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests ones ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+Given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. One can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). Here we operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
 ### Project Tasks
 
@@ -18,11 +18,7 @@ Project goal is to operationalize this working, machine learning microservice us
 * Upload a complete Github repo with CircleCI to indicate that code has been tested
 
 
-**The final implementation of the project showcases ones abilities to operationalize production microservices.**
-
----
-
-## Setup the Environment
+## Environment Setup
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
@@ -37,7 +33,9 @@ source .devops/bin/activate
 
 ### Running `app.py`
 
-1. Standalone:  `python app.py`
+This project operationalizes our machine learning API via three methods which includes:
+
+1. Locally/Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 

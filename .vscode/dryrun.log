@@ -1,0 +1,7 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/micah/Documents/WorkSpaces/DevOpsProjects/Udacity/project-ml-microservice-kubernetes'
+# Create python virtualenv & source it
+# source ~/.devops/bin/activate
+python3 -m venv ~/.devops
+make: Leaving directory 'c:/Users/micah/Documents/WorkSpaces/DevOpsProjects/Udacity/project-ml-microservice-kubernetes'
+ 
