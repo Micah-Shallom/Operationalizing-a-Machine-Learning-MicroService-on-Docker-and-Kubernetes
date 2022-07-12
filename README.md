@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Micah-Shallom/Operationalizing-a-Machine-Learning-MicroService-on-Docker-and-Kubernetes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Micah-Shallom/Operationalizing-a-Machine-Learning-MicroService-on-Docker-and-Kubernetes/tree/main)
 
 ## Project Overview
 
