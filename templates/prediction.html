@@ -1,0 +1,20 @@
+{%extends "layout.html"%}
+
+{%block content%}
+
+    <div class="container-fluid text-center prediction">
+        <div class="container-fluid my-3">
+            {% for key,value in form_data.items() %}
+                <button type="button mx-3 btn-large" class="btn btn-info">
+                    {{key}} <span class="badge text-bg-secondary">{{value}}</span>
+                </button>
+            {% endfor %}
+
+        </div>
+        
+        <div class="container-fluid prediction mx-4">
+            The predicted cost of the house is <h2>${{prediction}}</h2>
+        </div>
+    </div>
+    
+{%endblock%}
