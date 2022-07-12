@@ -5,8 +5,8 @@ WORKDIR /app
 COPY . app.py /app/
 
 # hadolint ignore=DL3013
+RUN pip install --no-cache-dir --upgrade pip && pip install -r --no-cache-dir requirements.txt 
 # RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
-RUN pip install --upgrade pip && pip install -r requirements.txt
 
 EXPOSE 80
 
