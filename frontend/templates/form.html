@@ -1,0 +1,37 @@
+{%extends "layout.html"%}
+
+
+{%block content%}
+<form action="/predict"  class='formbox shadow' method="POST">
+    <fieldset class="container-fluid">
+        <legend>Enter Data</legend>
+        <div class="mb-3">
+            <label for="chas" class="form-label">CHAS</label>CHAS
+            <input type="number" class="form-control" id="chas" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="rm" class="form-label">RM</label>
+            <input type="number" class="form-control" id="rm" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="tax" class="form-label">Tax</label>
+            <input type="number" class="form-control" id="tax" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="ptratio" class="form-label">PTRatio</label>
+            <input type="number" class="form-control" id="ptratio" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="b" class="form-label">B</label>
+            <input type="number" class="form-control" id="b" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="lstat" class="form-label">LSTAT</label>
+            <input type="number" class="form-control" id="lstat" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-info" href="#" type="submit" value="Predict">
+        </div>
+    </fieldset>
+</form>
+{%endblock%}
