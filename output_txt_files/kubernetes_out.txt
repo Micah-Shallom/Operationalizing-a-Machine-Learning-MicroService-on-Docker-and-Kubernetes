@@ -1,1 +1,15 @@
-<paste log output from Kubernetes-mediated prediction, here>
+#Pod name and status
+NAME                        READY   STATUS    RESTARTS   AGE
+mldocker-668b666748-4nxsf   1/1     Running   0          85m
+
+##Port Handling Text on main terminal
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
