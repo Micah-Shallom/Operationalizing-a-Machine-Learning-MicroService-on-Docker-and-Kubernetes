@@ -5,12 +5,13 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Tue Jul 12 09:26:53 2022
+# Make data base, printed on Tue Jul 12 16:00:32 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -36,7 +37,9 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11384_IQPXJXZGJBYIUPRB
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13828_OJHUIUYZACDJMRHL
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -86,7 +89,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 11384
+VSCODE_PID = 13828
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -165,8 +168,7 @@ MAKE_VERSION := 4.3
 PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-3A54NL4D
-# 
- environment
+# environment
 NUMBER_OF_PROCESSORS = 8
 # environment
 PUBLIC = C:\Users\Public
@@ -202,9 +204,8 @@ SESSIONNAME = Console
 PROCESSOR_REVISION = 8c01
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
-# v 
-ariable set hash-table stats:
-# Load=95/1024=9%, Rehash=0, Collisions=8/125=6%
+# variable set hash-table stats:
+# Load=97/1024=9%, Rehash=0, Collisions=9/127=7%
 
 # Pattern-specific Variable Values
 
@@ -236,17 +237,17 @@ lint:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 24):
-	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# This is linter for Dockerfiles
 	hadolint Dockerfile
-	# This is a linter for Python source code linter: https://www.pylint.org/
+	
+	# This is a linter for Python source code linter
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203,W1202 app.py
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-11 23:37:08
+#  Last modified 2022-07-12 14:01:25
 #  File has been updated.
 #  Successfully updated.
 
@@ -323,6 +324,6 @@ install:
 # strcache performance: lookups = 37 / hit rate = 37%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/37=0%
-# Finished Make data base on Tue Jul 12 09:26:53 2022
+# Finished Make data base on Tue Jul 12 16:00:32 2022
 
  
