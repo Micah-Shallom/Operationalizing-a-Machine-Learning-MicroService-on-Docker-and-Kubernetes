@@ -1,7 +1,9 @@
+# pylint: disable=W0105
+
 from flask import Flask, request, jsonify, render_template
 from flask.logging import create_logger
 from time import sleep
-from numpy import round
+import numpy as np
 import logging 
 
 import pandas as pd
@@ -37,7 +39,8 @@ def predict():
         return f"The URL /data is accessed directly. Try going to '/home' to submit form"
 
     if request.method == 'POST':
-        """Performs an sklearn prediction
+        """
+        Performs an sklearn prediction
         
         input looks like:
         {
@@ -62,7 +65,6 @@ def predict():
         
         result looks like:
         { "prediction": [ <val> ] }
-        
         """
 
         form_data = request.form
@@ -81,14 +83,16 @@ def predict():
         LOG.info(f"Inference payload DataFrame: \n{inference_payload}")
         # scale the input
         scaled_payload = scale(inference_payload)
+        LOG.info(scaled_payload)
         # get an output prediction from the pretrained model, clf
         prediction = list(clf.predict(scaled_payload))
         # TO DO:  Log the output prediction value
         LOG.info(f"Output Prediction: {prediction}")
         preds = jsonify({'prediction': prediction})
+        LOG.info(preds)
         sleep(2)
 
-        return render_template('prediction.html', form_data = form_data, prediction=round(prediction[0], decimals=3))
+        return render_template('prediction.html', form_data = form_data, prediction=np.round(prediction[0], decimals=3))
     
 
 

@@ -5,33 +5,33 @@
 <form action="/predict"  class='formbox shadow' method="POST">
     
     <fieldset class="container-fluid">
-        <legend>Enter Data</legend>
+        <legend class="mb-3 center">Enter Data</legend>
         <div class="mb-3">
-            <label for="chas" class="form-label">CHAS</label>CHAS
-            <input type="number" class="form-control" id="chas" name="CHAS" placeholder="name@example.com">
+            <label for="chas" class="form-label">CHAS</label>
+            <input type="number" class="form-control" id="chas" name="CHAS" placeholder="Charles River dummy variable (= 1 if tract bounds river; 0 otherwise).">
         </div>
         <div class="mb-3">
             <label for="rm" class="form-label">RM</label>
-            <input type="number" class="form-control" id="rm" name="RM" placeholder="name@example.com">
+            <input type="number" class="form-control" id="rm" name="RM" placeholder="Average number of rooms per dwelling.">
         </div>
         <div class="mb-3">
             <label for="tax" class="form-label">Tax</label>
-            <input type="number" class="form-control" id="tax" name="Tax" placeholder="name@example.com">
+            <input type="number" class="form-control" id="tax" name="Tax" placeholder="Full-value property-tax rate per \$10,000.">
         </div>
         <div class="mb-3">
             <label for="ptratio" class="form-label">PTRatio</label>
-            <input type="number" class="form-control" id="ptratio" name="PTRatio" placeholder="name@example.com">
+            <input type="number" class="form-control" id="ptratio" name="PTRatio" placeholder="Pupil-Teacher ratio by town.">
         </div>
         <div class="mb-3">
             <label for="b" class="form-label">B</label>
-            <input type="number" class="form-control" id="b" name="B" placeholder="name@example.com">
+            <input type="number" class="form-control" id="b" name="B" placeholder="1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town.">
         </div>
         <div class="mb-3">
             <label for="lstat" class="form-label">LSTAT</label>
-            <input type="number" class="form-control" id="lstat" name="LSTAT" placeholder="name@example.com">
+            <input type="number" class="form-control" id="lstat" name="LSTAT" placeholder="Lower status of the population (percent).">
         </div>
         <div class="mb-3">
-            <input class="btn btn-info" href="#" type="submit" value="Predict">
+            <input class="btn btn-info text-light" href="#" type="submit" value="Predict">
         </div>
     </fieldset>
 
