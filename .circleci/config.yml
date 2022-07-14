@@ -98,5 +98,5 @@ workflows:
       - build
       - deploy:
           requires: [build]
-      # - configure-deploy:
-      #     requires: [deploy]
+      - configure-deploy:
+          requires: [deploy]
