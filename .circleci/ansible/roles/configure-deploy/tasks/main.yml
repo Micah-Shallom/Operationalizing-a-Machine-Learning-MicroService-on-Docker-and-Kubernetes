@@ -15,15 +15,14 @@
   apt:
     autoremove: yes
 
-# - name: Installing pip
-#   apt: name=python3-pip state=present 
-
-- name: Install project requirements
-  become: yes
+- name: Installing pip
   apt:
     name: "python3-pip"
     state: present
     update_cache: yes
+
+- name: Install project requirements
+  become: yes
   pip:
     state: latest
     requirements: "/requirements.txt"
