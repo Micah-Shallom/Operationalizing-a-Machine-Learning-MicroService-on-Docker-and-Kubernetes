@@ -15,11 +15,11 @@
   apt:
     autoremove: yes
 
-- name: Installs Python libraries from requirements.txt
-  easy_install:
-    name: {{ item }}
-    state: present
-  with_lines: cat "/requirements.txt"
+# - name: Installs Python libraries from requirements.txt
+#   easy_install:
+#     name: {{ item }}
+#     state: present
+#   with_lines: cat "/requirements.txt"
 
 - name: start app
   become: yes
