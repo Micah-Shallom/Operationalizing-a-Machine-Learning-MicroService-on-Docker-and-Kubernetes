@@ -61,27 +61,38 @@ jobs:
               --tags project=mlproject \
               --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}"
 
-  # configure-infrastructure:
-  #   docker:
-  #     - image: python:3.7-alpine3.11
-  #   steps:
-  #     - checkout
-  #     - add_ssh_keys:
-  #         fingerprints: ["40:a7:61:3c:d4:5f:5f:48:77:97:21:73:58:d4:69:b8"]
-  #     - attach_workspace:
-  #         at: ~/
-  #     - run:
-  #         name: Installing dependencies
-  #         command: |
-  #           apk add --update tar gzip ansible 
-  #           pip install awscli 
-  #     - run:
-  #         name: Configure server
-  #         command: |
-  #           cd .circleci/ansible
-  #           ansible-playbook -i inventory.txt configure-server.yml
-  #     - destroy-environment:
-  #         workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+      - run:
+          name: add backend ec2 ip to ansible inventory
+          command: |
+            aws ec2 describe-instances \
+              --query 'Reservations[*].Instances[*].PublicIpAddress' \
+              --filters "Name=tag:aws:cloudformation:stack-name,Values=mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
+              --output text >> ~/project/.circleci/ansible/inventory.txt
+              cat ~/project/.circleci/ansible/inventory.txt
+
+  configure-infrastructure:
+    docker:
+      - image: python:3.7-alpine3.11
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints: ["40:a7:61:3c:d4:5f:5f:48:77:97:21:73:58:d4:69:b8"]
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Installing dependencies
+          command: |
+            apk add --update tar gzip ansible 
+            pip install awscli 
+      - run:
+          name: Configure server
+          command: |
+            cd .circleci/ansible
+            ansible-playbook -i inventory.txt configure-server.yml
+      - destroy-environment:
+          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+
+  
 
 workflows:
   myworkflow:
@@ -89,3 +100,5 @@ workflows:
       - build
       - deploy:
           requires: [build]
+      - configure-deploy:
+          requires: [deploy]
