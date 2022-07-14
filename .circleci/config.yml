@@ -59,7 +59,8 @@ jobs:
               aws cloudformation deploy \
               --template-file .circleci/files/deploy.yml \
               --tags project=mlproject \
-              --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}"
+              --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
+              --parameter-overrides ID=${CIRCLE_WORKFLOW_ID:0:7}
 
       - run:
           name: add backend ec2 ip to ansible inventory
