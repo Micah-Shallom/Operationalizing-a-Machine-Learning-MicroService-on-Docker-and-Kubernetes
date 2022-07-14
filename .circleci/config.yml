@@ -9,7 +9,7 @@ jobs:
     # Use the same Docker base as the project
       - image: python:3.7.3-stretch
 
-    working_directory: ~/repo
+    # working_directory: ~/project
 
     steps:
       - checkout
@@ -68,8 +68,8 @@ jobs:
             aws ec2 describe-instances \
               --query 'Reservations[*].Instances[*].PublicIpAddress' \
               --filters "Name=tag:aws:cloudformation:stack-name,Values=mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
-              --output text >> ~/repo/.circleci/ansible/inventory.txt
-              cat ~/repo/.circleci/ansible/inventory.txt
+              --output text >> ~/project/.circleci/ansible/inventory.txt
+              cat ~/project/.circleci/ansible/inventory.txt
 
   configure-deploy:
     docker:
