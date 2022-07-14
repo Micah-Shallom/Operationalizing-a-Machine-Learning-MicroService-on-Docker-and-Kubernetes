@@ -12,6 +12,11 @@
     - ansible_host_key_checking: false
     - ansible_stdout_callback: yaml
 
+    - name: Testing copy of the local remote file
+      copy:
+        src: ~/project
+        dest: /tmp
+
     - name: "install python for Ansible."
       become: yes
       apt:

@@ -92,18 +92,25 @@ jobs:
       - run:
           name: Configure server
           command: |
-            
-            cd ~/project/.circleci/ansible
-            ls ~/project
-            cat inventory.txt
-            ansible-playbook -i inventory.txt configure-deploy.yml
+
+            cd ~/project/.circleci
+            tar -C files  -czvf code.tar.gz ~/project/
+            cp files/ ~/project/.circleci/ansible/roles/configure-deploy/files
+
+            ls -lah ~/project/.circleci/files
+            ls -lah  ~/project/.circleci/ansible/roles/configure-deploy/files
+
+            # cd ~/project/.circleci/ansible
+            # cat inventory.txt
+            # ansible-playbook -i inventory.txt configure-deploy.yml
   
 
 workflows:
   myworkflow:
     jobs:
-      - build
-      - deploy:
-          requires: [build]
+      # - build
+      -deploy
+      # - deploy:
+      #     requires: [build]
       - configure-deploy:
           requires: [deploy]
