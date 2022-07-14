@@ -50,6 +50,10 @@ jobs:
       - checkout
 
       - run:
+          name: Installing dependencies
+          command: |
+            pip install awscli
+      - run:
           name: creating instance for application
           command: |
               aws cloudformation deploy \
