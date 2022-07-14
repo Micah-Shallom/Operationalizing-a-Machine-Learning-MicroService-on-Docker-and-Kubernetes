@@ -88,7 +88,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            cd .circleci/ansible
+            cd ~/project/.circleci/ansible
             cat inventory.txt
             ansible-playbook -i inventory.txt configure-deploy.yml
   
