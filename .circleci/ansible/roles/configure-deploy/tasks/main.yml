@@ -21,6 +21,12 @@
     state: present
     update_cache: yes
 
+- name: start app
+  become: yes
+  shell: |
+    pwd
+    ls
+
 - name: Install project requirements
   become: yes
   pip:
