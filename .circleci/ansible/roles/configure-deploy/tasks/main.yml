@@ -25,7 +25,7 @@
   become: yes
   pip:
     state: latest
-    requirements: "/requirements.txt"
+    requirements: "requirements.txt"
 
 # - name: Installs Python libraries from requirements.txt
 #   easy_install:
