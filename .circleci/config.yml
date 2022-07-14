@@ -49,13 +49,13 @@ jobs:
     steps:
       - checkout
 
-    - run:
-        name: creating instance for application
-        command: |
-            aws cloudformation deploy \
-            --template-file .circleci/files/deploy.yml \
-            --tags project=mlproject \
-            --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}"
+      - run:
+          name: creating instance for application
+          command: |
+              aws cloudformation deploy \
+              --template-file .circleci/files/deploy.yml \
+              --tags project=mlproject \
+              --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}"
 
   # configure-infrastructure:
   #   docker:
