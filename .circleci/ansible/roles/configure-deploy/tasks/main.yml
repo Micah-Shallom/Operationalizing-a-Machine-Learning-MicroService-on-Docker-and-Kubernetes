@@ -1,19 +1,19 @@
 ---
 
-- name: "update apt packages"
-  become: yes
-  apt:
-    update_cache: yes
+# - name: "update apt packages"
+#   become: yes
+#   apt:
+#     update_cache: yes
 
-- name: "upgrade"
-  become: yes
-  apt:
-    upgrade: yes
+# - name: "upgrade"
+#   become: yes
+#   apt:
+#     upgrade: yes
 
-- name: remove dependencies that are no longer required
-  become: true
-  apt:
-    autoremove: yes
+# - name: remove dependencies that are no longer required
+#   become: true
+#   apt:
+#     autoremove: yes
 
 - name: Installing pip
   apt:
@@ -24,8 +24,8 @@
 - name: start app
   become: yes
   shell: |
-    pwd
-    ls
+    echo $(pwd) >> ~/test
+    echo $(ls) >> ~/test
 
 - name: Install project requirements
   become: yes
