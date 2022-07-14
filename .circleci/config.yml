@@ -109,7 +109,7 @@ workflows:
   myworkflow:
     jobs:
       # - build
-      -deploy
+      - deploy
       # - deploy:
       #     requires: [build]
       - configure-deploy:
