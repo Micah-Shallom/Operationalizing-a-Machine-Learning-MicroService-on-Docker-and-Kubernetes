@@ -41,3 +41,47 @@ jobs:
           command: |
             . venv/bin/activate
             make lint 
+  
+  deploy:
+    docker:
+      - image: python:3.7.3-stretch
+    
+    steps:
+      - checkout
+
+    - run:
+        name: creating instance for application
+        command: |
+            aws cloudformation deploy \
+            --template-file .circleci/files/deploy.yml \
+            --tags project=mlproject \
+            --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}"
+
+  # configure-infrastructure:
+  #   docker:
+  #     - image: python:3.7-alpine3.11
+  #   steps:
+  #     - checkout
+  #     - add_ssh_keys:
+  #         fingerprints: ["40:a7:61:3c:d4:5f:5f:48:77:97:21:73:58:d4:69:b8"]
+  #     - attach_workspace:
+  #         at: ~/
+  #     - run:
+  #         name: Installing dependencies
+  #         command: |
+  #           apk add --update tar gzip ansible 
+  #           pip install awscli 
+  #     - run:
+  #         name: Configure server
+  #         command: |
+  #           cd .circleci/ansible
+  #           ansible-playbook -i inventory.txt configure-server.yml
+  #     - destroy-environment:
+  #         workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+
+workflows:
+  myworkflow:
+    jobs:
+      - build
+      - deploy:
+          requires: ['build']
