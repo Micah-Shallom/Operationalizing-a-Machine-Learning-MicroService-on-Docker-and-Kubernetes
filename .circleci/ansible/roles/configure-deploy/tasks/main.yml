@@ -1,19 +1,19 @@
 ---
 
-# - name: "update apt packages"
-#   become: yes
-#   apt:
-#     update_cache: yes
+- name: "update apt packages"
+  become: yes
+  apt:
+    update_cache: yes
 
-# - name: "upgrade"
-#   become: yes
-#   apt:
-#     upgrade: yes
+- name: "upgrade"
+  become: yes
+  apt:
+    upgrade: yes
 
-# - name: remove dependencies that are no longer required
-#   become: true
-#   apt:
-#     autoremove: yes
+- name: remove dependencies that are no longer required
+  become: true
+  apt:
+    autoremove: yes
 
 - name: Installing pip
   apt:
@@ -21,23 +21,17 @@
     state: present
     update_cache: yes
 
-- name: start app
+- name: extract code artifact
   become: yes
-  shell: |
-    echo $(pwd) >> ~/test
-    echo $(ls) >> ~/test
+  unarchive:
+    src: code.tar.gz
+    dest: .
 
 - name: Install project requirements
   become: yes
   pip:
     state: latest
     requirements: "requirements.txt"
-
-# - name: Installs Python libraries from requirements.txt
-#   easy_install:
-#     name: {{ item }}
-#     state: present
-#   with_lines: cat "/requirements.txt"
 
 - name: start app
   become: yes
