@@ -92,8 +92,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            cd ~/project
-            tar -czf code.tar.gz .
+            tar -czf code.tar.gz ~/project/*
 
             mkdir -p  ~/project/.circleci/ansible/roles/configure-deploy/files
             mv code.tar.gz ~/project/.circleci/ansible/roles/configure-deploy/files/code.tar.gz
