@@ -52,24 +52,24 @@ jobs:
       - run:
           name: Installing dependencies
           command: |
-            pip install awscli
+            # pip install awscli
       - run:
           name: creating instance for application
           command: |
-              aws cloudformation deploy \
-              --template-file .circleci/files/deploy.yml \
-              --tags project=mlproject \
-              --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
-              --parameter-overrides ID=${CIRCLE_WORKFLOW_ID:0:7}
+              # aws cloudformation deploy \
+              # --template-file .circleci/files/deploy.yml \
+              # --tags project=mlproject \
+              # --stack-name "mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
+              # --parameter-overrides ID=${CIRCLE_WORKFLOW_ID:0:7}
 
       - run:
           name: add backend ec2 ip to ansible inventory
           command: |
-            aws ec2 describe-instances \
-              --query 'Reservations[*].Instances[*].PublicIpAddress' \
-              --filters "Name=tag:aws:cloudformation:stack-name,Values=mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
-              --output text >> ~/project/.circleci/ansible/inventory.txt
-              cat ~/project/.circleci/ansible/inventory.txt
+            # aws ec2 describe-instances \
+            #   --query 'Reservations[*].Instances[*].PublicIpAddress' \
+            #   --filters "Name=tag:aws:cloudformation:stack-name,Values=mlproject-${CIRCLE_WORKFLOW_ID:0:7}" \
+            #   --output text >> ~/project/.circleci/ansible/inventory.txt
+            #   cat ~/project/.circleci/ansible/inventory.txt
       - persist_to_workspace:
           root: ~/
           paths:
@@ -92,13 +92,13 @@ jobs:
       - run:
           name: Configure server
           command: |
+            pwd 
+            ls
+            tar -czvf code.tar.gz ~/project/
 
-            cd ~/project/.circleci
-            tar -C files  -czvf code.tar.gz ~/project/
-            cp files/ ~/project/.circleci/ansible/roles/configure-deploy/files
+            mv code.tar.gz ~/project/.circleci/ansible/roles/configure-deploy/files/code.tar.gz
 
-            ls -lah ~/project/.circleci/files
-            ls -lah  ~/project/.circleci/ansible/roles/configure-deploy/files
+            ls  ~/project/.circleci/ansible/roles/configure-deploy/files
 
             # cd ~/project/.circleci/ansible
             # cat inventory.txt
