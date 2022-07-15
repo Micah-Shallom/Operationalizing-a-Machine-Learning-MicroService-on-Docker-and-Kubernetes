@@ -31,7 +31,7 @@
   become: yes
   pip:
     state: latest
-    requirements: "~/root/project/requirements.txt"
+    requirements: "~/project/requirements.txt"
 
 - name: start app
   become: yes
