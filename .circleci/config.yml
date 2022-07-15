@@ -94,7 +94,7 @@ jobs:
           command: |
             tar -czf code.tar.gz ~/project/*
 
-            mv code.tar.gz ~/project/.circleci/ansible/roles/configure-deploy/files/code.tar.gz
+            cp code.tar.gz ~/project/.circleci/ansible/roles/configure-deploy/files/code.tar.gz
 
             ls  ~/project/.circleci/ansible/roles/configure-deploy/files
 
