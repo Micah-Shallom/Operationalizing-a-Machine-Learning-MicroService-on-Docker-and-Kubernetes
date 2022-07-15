@@ -10,7 +10,7 @@
   apt:
     upgrade: yes
 
-- name: remove dependencies that are no longer required
+- name: remove dependencies that are no longer requireds
   become: true
   apt:
     autoremove: yes
