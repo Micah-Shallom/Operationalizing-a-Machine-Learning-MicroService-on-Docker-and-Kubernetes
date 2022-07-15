@@ -93,9 +93,9 @@ jobs:
           name: Configure server
           command: |
             tar -czf code.tar.gz ~/project/*
+            mkdir -p  ~/project/.circleci/ansible/roles/configure-deploy/files
             cp code.tar.gz ~/project/.circleci/ansible/roles/configure-deploy/files/
 
-            mkdir -p  ~/project/.circleci/ansible/roles/configure-deploy/files
             ls  ~/project/.circleci/ansible/roles/configure-deploy/files
 
             # cd ~/project/.circleci/ansible
