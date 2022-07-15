@@ -37,4 +37,4 @@
   become: yes
   shell: |
     cd /home/ubuntu/root/project/
-    sudo python3 app.py
+    sudo python3 app.py >> log.txt 2>&1 &

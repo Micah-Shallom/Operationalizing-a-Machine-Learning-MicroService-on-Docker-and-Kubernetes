@@ -106,9 +106,8 @@ jobs:
 workflows:
   myworkflow:
     jobs:
-      # - build
-      - deploy
-      # - deploy:
-      #     requires: [build]
+      - build
+      - deploy:
+          requires: [build]
       - configure-deploy:
           requires: [deploy]
