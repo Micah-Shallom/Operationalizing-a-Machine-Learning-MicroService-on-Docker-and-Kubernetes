@@ -31,9 +31,9 @@
   become: yes
   pip:
     state: latest
-    requirements: "./root/project/requirements.txt"
+    requirements: "/home/ubuntu/root/project/requirements.txt"
 
 - name: start app
   become: yes
   shell: |
-    python ./root/project/app.py
+    python /home/ubuntu/root/project/app.py
