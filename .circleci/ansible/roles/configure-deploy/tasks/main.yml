@@ -36,4 +36,4 @@
 - name: start app
   become: yes
   shell: |
-    python3 /home/ubuntu/root/project/app.py
+    sudo python3 /home/ubuntu/root/project/app.py
