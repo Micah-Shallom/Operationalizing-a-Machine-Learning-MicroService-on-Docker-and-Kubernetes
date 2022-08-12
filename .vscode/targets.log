@@ -6,14 +6,18 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 12 16:00:32 2022
+# Make data base, printed on Fri Aug 12 09:33:59 2022
 
 # Variables
 
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
+PROVIDE_FULLSTACK_ACTION = true
+# environment
 SYSTEMDRIVE = C:
+# environment
+JAVA_HOME = C:\Program Files\Java\jdk-11.0.15.1
 # environment
 LC_ALL = C
 # environment
@@ -21,9 +25,15 @@ USERPROFILE = C:\Users\micah
 # environment
 VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
+TMPDIR = C:\Users\micah\AppData\Local\Temp
+# environment
+UUID = 8cc7b68c-6632-4a2b-bc39-370bdb84158e
+# environment
 LOCALAPPDATA = C:\Users\micah\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\micah\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\Users\micah\Documents\WorkSpaces\DevOpsProjects\Udacity\project-ml-microservice-kubernetes
+# environment
+MINGW_PREFIX = C:/Program Files/Git/mingw64
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -34,18 +44,30 @@ PROCESSOR_LEVEL = 6
 PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# environment
+THREE_SCALE_USER_TOKEN = 207c527cfc2a6b8dcf4fa43ad7a976da
+# environment
+GOPATH = C:\Users\micah\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13828_OJHUIUYZACDJMRHL
+ACLOCAL_PATH = C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_34108_CGOJSWBDHWTQFJWL
+# environment
+ORIGINAL_TEMP = C:/Users/micah/AppData/Local/Temp
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
+# environment
+PWD = C:/Users/micah/Documents/WorkSpaces/DevOpsProjects/Udacity/project-ml-microservice-kubernetes
 # automatic
 %D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+HOSTNAME = LAPTOP-3A54NL4D
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # environment
@@ -53,7 +75,9 @@ AWS_DEFAULT_REGION = us-west-1
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\micah\AppData\Roaming\Code\CachedData\92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
+VSCODE_CODE_CACHE_PATH = C:\Users\micah\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
+# environment
+SSH_ASKPASS = C:/Program Files/Git/mingw64/bin/git-askpass.exe
 # environment
 LANG = C
 # default
@@ -67,9 +91,15 @@ PROCESSOR_ARCHITEW6432 = AMD64
 # makefile
 MAKEFLAGS = pqrR
 # environment
+PKG_CONFIG_PATH = C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+# environment
 ONEDRIVE = C:\Users\micah\OneDrive
 # makefile
 CURDIR := c:/Users/micah/Documents/WorkSpaces/DevOpsProjects/Udacity/project-ml-microservice-kubernetes
+# environment
+UTM_SOURCE = vscode
+# environment
+MSYSTEM_CARCH = x86_64
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -78,6 +108,8 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 PROGRAMFILES = C:\Program Files (x86)
 # environment
 MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = C:/Users/micah/AppData/Local/Temp/ssh-wgMykY0GmhPC/agent.2748
 # default
 .SHELLFLAGS := -c
 # environment
@@ -89,11 +121,15 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 13828
+VSCODE_PID = 34108
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# environment
+MINGW_CHOST = x86_64-w64-mingw32
 # automatic
 *F = $(notdir $*)
+# environment
+MANPATH = C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
 # automatic
 <D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
@@ -104,12 +140,18 @@ ONEDRIVECONSUMER = C:\Users\micah\OneDrive
 MAKE_HOST := Windows32
 # environment
 PROGRAMDATA = C:\ProgramData
-# default
-SHELL := sh.exe
+# environment
+INFOPATH = C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+# makefile
+SHELL = C:/Program Files/Git/usr/bin/sh.exe
+# environment
+ORIGINAL_PATH = C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\micah\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\HashiCorp\Vagrant\bin;C:\Program Files\PuTTY;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Amazon\AWSCLIV2;C:\Users\micah\AppData\Roaming\Python\Python310\Scripts;C:\minikube;C:\Program Files\Kubernetes\Minikube;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Program Files\apache-maven-3.8.6\bin;C:\Users\micah\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\micah\AppData\Local\Programs\Python\Python310;C:\Users\micah\scoop\shims;C:\Users\micah\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\micah\AppData\Local\Programs\Python\Python39;C:\Users\micah\AppData\Local\Microsoft\WindowsApps;C:\Users\micah\AppData\Roaming\npm;C:\Users\micah\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\micah\AppData\Roaming\Python\Python310\Scripts;C:\Users\micah\go\bin;C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin
 # environment
 HOMEPATH = \Users\micah
 # default
 MAKECMDGOALS := all
+# environment
+SHLVL = 2
 # environment
 DRIVERDATA = C:\Windows\System32\Drivers\DriverData
 # environment
@@ -121,7 +163,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\HashiCorp\Vagrant\bin;C:\Program Files\PuTTY\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\micah\AppData\Roaming\Python\Python310\Scripts;;C:\minikube;C:\Program Files\Kubernetes\Minikube;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\micah\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\micah\AppData\Local\Programs\Python\Python37\;C:\Users\micah\scoop\shims;C:\Users\micah\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\micah\AppData\Local\Programs\Python\Python39\;C:\Users\micah\AppData\Local\Microsoft\WindowsApps;C:\Users\micah\AppData\Roaming\npm;C:\Users\micah\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\micah\AppData\Roaming\Python\Python310\Scripts;
+PATH = C:\Users\micah\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\micah\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\HashiCorp\Vagrant\bin;C:\Program Files\PuTTY;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Amazon\AWSCLIV2;C:\Users\micah\AppData\Roaming\Python\Python310\Scripts;C:\minikube;C:\Program Files\Kubernetes\Minikube;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Program Files\apache-maven-3.8.6\bin;C:\Users\micah\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\micah\AppData\Local\Programs\Python\Python310;C:\Users\micah\scoop\shims;C:\Users\micah\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\micah\AppData\Local\Programs\Python\Python39;C:\Users\micah\AppData\Local\Microsoft\WindowsApps;C:\Users\micah\AppData\Roaming\npm;C:\Users\micah\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\micah\AppData\Roaming\Python\Python310\Scripts;C:\Users\micah\go\bin;C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 # environment
 ZES_ENABLE_SYSMAN = 1
 # environment
@@ -133,13 +175,19 @@ AWS_SECRET_ACCESS_KEY = g68Jgii9YQ8H05wDrAfhLNIr5qVn5t+YZliyO5eZ
 # automatic
 ^F = $(notdir $^)
 # environment
+MINGW_PACKAGE_PREFIX = mingw-w64-x86_64
+# environment
 PROMPT = $P$G
 # environment
-CHOCOLATEYLASTPATHUPDATE = 133017562800687300
+CHOCOLATEYLASTPATHUPDATE = 133036748556523755
 # environment
 LOGONSERVER = \\LAPTOP-3A54NL4D
 # environment
 USERNAME = micah
+# environment
+TERM_PROGRAM = mintty
+# environment
+RECOMMENDER_API_URL = https://gw.api.openshift.io//api/v2
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # automatic
@@ -147,11 +195,15 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 PROGRAMW6432 = C:\Program Files
 # environment
+MSYSTEM_CHOST = x86_64-w64-mingw32
+# environment
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # environment
 AWS_ACCESS_KEY_ID = AKIAY6SD2ZOFBRPNVQH2
 # automatic
 +F = $(notdir $+)
+# environment
+CONFIG_SITE = C:/Program Files/Git/etc/config.site
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -160,8 +212,12 @@ USERDOMAIN = LAPTOP-3A54NL4D
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
+# environment
+MSYSTEM_PREFIX = C:/Program Files/Git/mingw64
 # makefile
 .DEFAULT_GOAL := setup
+# environment
+DISPLAY = needs-to-be-defined
 # default
 MAKE_VERSION := 4.3
 # environment
@@ -173,39 +229,67 @@ NUMBER_OF_PROCESSORS = 8
 # environment
 PUBLIC = C:\Users\Public
 # environment
+SSH_AGENT_PID = 2749
+# environment
+_ = C:/Users/micah/AppData/Local/Programs/Microsoft VS Code/Code.exe
+# environment
 APPDATA = C:\Users\micah\AppData\Roaming
 # environment
 HOMEDRIVE = C:
 # environment
+LC_CTYPE = en_US.UTF-8
+# environment
 PROCESSOR_ARCHITECTURE = x86
+# environment
+GOLANG_EXECUTABLE = go
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
+MSYSTEM = MINGW64
+# environment
+HOME = C:\Users\micah
+# environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+EXEPATH = C:\Program Files\Git
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\micah\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\7f54dfc4f0aaf44b84a1be5579b3f155-1.69.0-main-sock
+TERM = xterm
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\7f54dfc4f0aaf44b84a1be5579b3f155-1.70.0-main-sock
 # default
 .RECIPEPREFIX := 
+# environment
+ORIGINAL_TMP = C:/Users/micah/AppData/Local/Temp
 # automatic
 <F = $(notdir $<)
+# environment
+PLINK_PROTOCOL = ssh
 # default
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
+# environment
+VSCODE_CLI = 1
+# environment
+TELEMETRY_ID = 325874df-3671-4416-bd2a-bc344c3cc9e5
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 8c01
 # environment
+TERM_PROGRAM_VERSION = 3.6.0
+# environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=9/127=7%
+# Load=139/1024=14%, Rehash=0, Collisions=13/169=8%
 
 # Pattern-specific Variable Values
 
@@ -213,9 +297,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/micah/Documents/WorkSpaces/DevOpsProjects/Udacity/project-ml-microservice-kubernetes, mtime 1657570381): 16 files, no impossibilities.
+# . (key c:/Users/micah/Documents/WorkSpaces/DevOpsProjects/Udacity/project-ml-microservice-kubernetes, mtime 1657739378): 17 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -247,7 +331,7 @@ lint:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-12 14:01:25
+#  Last modified 2022-07-12 17:35:08
 #  File has been updated.
 #  Successfully updated.
 
@@ -318,12 +402,12 @@ install:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 225 B / avg = 9 B
-# current buf: size = 8174 B / used = 225 B / count = 23 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 235 B / avg = 9 B
+# current buf: size = 8174 B / used = 235 B / count = 24 / avg = 9 B
 
-# strcache performance: lookups = 37 / hit rate = 37%
+# strcache performance: lookups = 38 / hit rate = 36%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=0/37=0%
-# Finished Make data base on Tue Jul 12 16:00:32 2022
+# Load=24/8192=0%, Rehash=0, Collisions=0/38=0%
+# Finished Make data base on Fri Aug 12 09:33:59 2022
 
  
